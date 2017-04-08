@@ -19,6 +19,13 @@
 	</properties>
 
 	<dependencies>
+	<!-- https://mvnrepository.com/artifact/com.typesafe.akka/akka-agent_2.11 -->
+	
+		<dependency>
+			<groupId>com.typesafe.akka</groupId>
+			<artifactId>akka-agent_${akka.artifact.version}</artifactId>
+			<version>${akka.version}</version>
+		</dependency>
 		<!-- https://mvnrepository.com/artifact/com.typesafe.akka/akka-actor_2.11 -->
 		<dependency>
 			<groupId>com.typesafe.akka</groupId>
