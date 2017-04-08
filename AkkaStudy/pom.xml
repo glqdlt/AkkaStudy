@@ -13,7 +13,8 @@
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<!-- Akka -->
-		<akka.version>2.3.1</akka.version>
+		<akka.artifact.version>2.11</akka.artifact.version>
+		<akka.version>2.4.2</akka.version>
 
 	</properties>
 
@@ -21,22 +22,17 @@
 		<!-- https://mvnrepository.com/artifact/com.typesafe.akka/akka-actor_2.11 -->
 		<dependency>
 			<groupId>com.typesafe.akka</groupId>
-			<artifactId>akka-actor_2.10</artifactId>
+			<artifactId>akka-actor_${akka.artifact.version}</artifactId>
 			<version>${akka.version}</version>
 		</dependency>
 		<dependency>
 			<groupId>com.typesafe.akka</groupId>
-			<artifactId>akka-persistence-experimental_2.10</artifactId>
+			<artifactId>akka-cluster_${akka.artifact.version}</artifactId>
 			<version>${akka.version}</version>
 		</dependency>
 		<dependency>
 			<groupId>com.typesafe.akka</groupId>
-			<artifactId>akka-cluster_2.10</artifactId>
-			<version>${akka.version}</version>
-		</dependency>
-		<dependency>
-			<groupId>com.typesafe.akka</groupId>
-			<artifactId>akka-slf4j_2.10</artifactId>
+			<artifactId>akka-slf4j_${akka.artifact.version}</artifactId>
 			<version>${akka.version}</version>
 		</dependency>
 		<dependency>

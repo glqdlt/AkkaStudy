@@ -9,9 +9,11 @@ public class PongActor extends UntypedActor {
 
 	private LoggingAdapter log = Logging.getLogger(getContext().system(), this);
 	private ActorRef ping;
+	private String pingName;
 
-	public PongActor(ActorRef ping) {
+	public PongActor(ActorRef ping, String pingName) {
 		this.ping = ping;
+		this.pingName = pingName;
 
 	}
 
@@ -19,9 +21,9 @@ public class PongActor extends UntypedActor {
 	public void onReceive(Object arg0) throws Exception {
 		if (arg0 instanceof String) {
 			String msg = (String) arg0;
-			log.info("Pong received {}", msg);
-			ping.tell("'pong'", getSelf());
-			Thread.sleep(10000);
+			log.info(pingName+"Pong received {}", msg);
+			ping.tell(pingName+"'pong'", getSelf());
+			Thread.sleep(1000);
 
 		}
 
